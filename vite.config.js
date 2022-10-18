@@ -3,7 +3,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { readdir, rm, writeFile } from 'fs/promises';
 
 // https://vitejs.dev/config/
-export default defineConfig({ 
+export default defineConfig({
   root: 'app',
   build: {
     outDir: '../static/svelte',
@@ -19,7 +19,7 @@ export default defineConfig({
       compilerOptions: {
         customElement: true,
       },
-  }),
+    }),
     syncToHugo()
   ]
 })

@@ -16,7 +16,7 @@ yarn install
 yarn start
 ```
 
-Check it on on `http://localhost:6979/`.
+Check it on on `http://localhost:6970/`.
 
 
 ## Commands
