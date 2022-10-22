@@ -1,0 +1,16 @@
+<footer class="container text-center my-6 p-8 text-gray3">
+    <div class="mx-auto w-24 h-1 my-12 bg-gradient-to-r from-gray5 to-gray4 rounded-full"></div>
+
+    <div class="flex justify-center items-center my-2">
+        <a href="{{ site.Data.links.linkedin }}"><i class="w-6 inline-block mx-2">{{ partial
+                "svg/linkedin.svg"}}</i></a>
+        <a href="{{ site.Data.links.github }}"><i class="w-6 inline-block mx-2">{{ partial "svg/github.svg"}}</i></a>
+        <a href="tel:{{ site.Data.links.phone }}"><i class="w-6 inline-block mx-2">{{ partial "svg/phone.svg"
+                }}</i></a>
+    </div>
+
+    <div class="text-xs">
+        Copyright © {{ now.Format "2006"}} <a href="mailto:{{ site.Data.links.email }}">Quentin Moessner</a><br>
+    </div>
+
+</footer>

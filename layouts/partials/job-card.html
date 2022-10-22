@@ -1,0 +1,17 @@
+<article
+    class="max-w-ml px-8 py-4 overflow-hidden shadow-xl flex flex-col items-center bg-gray6 y-6 hover:scale-105 rounded-xl transition-transform ease-in-out duration-500">
+    <h3 class="font-medium text-lg">{{ .job }} @ {{ .company }}
+    </h3>
+    <span class="font-medium"> {{ .start }} - {{ .end}}</span>
+    <span>{{ .locality }}</span>
+
+    <p class="prose dark:prose-invert">{{ .description | safeHTML }}</p>
+
+    <div class="grid grid-cols-4 gap-x-2 gap-y-1 md:grid-cols-5">
+        {{ range .tags }}
+        <span class=" tag tag-{{ . }} text-sm">
+            #{{ . }}
+        </span>
+        {{ end }}
+    </div>
+</article>

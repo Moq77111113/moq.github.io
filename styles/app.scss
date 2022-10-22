@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @import './buttons.scss';
+@import './mixins.scss';
+@import './effects.scss';
+@import './tags.scss';
 
 html {
     display: block;

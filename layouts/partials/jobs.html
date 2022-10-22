@@ -1,0 +1,9 @@
+<div class="prose dark:prose-invert max-w-ml">
+    <div class="container">
+        <div class="flex flex-col mt-20">
+            {{ range . }}
+            {{ partial "job-card" . }}
+            {{ end }}
+        </div>
+    </div>
+</div>
