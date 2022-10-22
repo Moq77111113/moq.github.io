@@ -1,18 +1,9 @@
+position: 1
 job: "Full Stack Developer"
 company: "Yamay"
 locality: "Lyon, France"
 start: "01/2022"
 end: "Aujourd'hui"
 description : > 
-      Un nouveau défi pour 2022 ! <br /> <br />
-      Chez Yamay, nous développons des solutions pour les professionnels du CHR. <br /> <br />
-tags:  
-  - node
-  - typescript
-  - react
-  - nest
-  - mongo
-  - elastic
-  - k8s
-  - gcp 
-  - gitlab
+
+tags: node,typescript,react,nest,mongo,elastic,k8s,docker,gcp,gitlab

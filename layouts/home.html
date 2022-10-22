@@ -3,20 +3,38 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="prose dark:prose-invert min-w-full">
-    <div class="container">
+<div class="min-w-90">
+    <div class="container ">
         <div class="flex flex-col mt-20">
             <div class="flex flex-col justify-center items-center text-center p-6">
                 <ui-avatar src="/img/ui/avatar.png" name="Quentin Moessner" email="quentin.moessner@gmail.com" />
+            </div>
+            <div class="flex flex-col justify-center items-center text-center p-6">
+                <h2 class="text-3xl text-gray3 font-display">Bienvenue, Welcome !</h2>
+                <p class="prose dark:prose-invert text-md mt-10">
+                    Je m'appelle Quentin Moessner, j'ai 28 ans et je suis développeur.
+                    Je développe principalement avec Nodejs depuis plus de 5ans maintenant
+                </p>
+            </div>
+            <div class="text-center mt-12 snap-proximity">
+                <scroll-show repeat="" delay="2000">
+                    <a href="#jobs" class="no-underline">
+                        <span class="animate-bounce text-5xl block">
+                            ⬇
+                        </span>
+                    </a>
+                </scroll-show>
             </div>
 
         </div>
     </div>
 </div>
 
-{{ partial "jobs" $.Site.Data.xp}}
-
-
+<div id="jobs" class="md:h-screen grid place-content-center text-center relative">
+    <scroll-show repeat="">
+        {{ partial "jobs" $.Site.Data.xp }}
+    </scroll-show>
+</div>
 {{ end }}
 
 
