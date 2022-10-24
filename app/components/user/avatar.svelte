@@ -3,12 +3,13 @@
 <script lang="ts">
   export let src: string;
   export let email: string;
+  export let name: string;
 </script>
 
 <a class="wrap" href={`mailto:${email}`}>
   <img
     {src}
-    alt="avatar"
+    alt={name}
     referrerpolicy="no-referrer"
     style="max-width: 100%; border-radius: 9999px;"
     on:error={() => (src = "/img/ui/avatar.svg")}

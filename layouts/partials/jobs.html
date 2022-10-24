@@ -1,10 +1,14 @@
-<div class="min-w-full">
-    <h2 class="text-gray3 font-700 text-3xl px-4 prose dark:prose-invert">Expériences</h1>
-        <div class="container">
-            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-                {{ range sort . "position"}}
-                {{ partial "job-card" . }}
-                {{ end }}
-            </div>
+<div id="jobs" class="md:h-screen grid place-content-center text-cente relative">
+    <scroll-show repeat="">
+        <div class="min-w-full">
+            <h2 class="text-gray3 font-700 text-3xl px-4 prose dark:prose-invert mx-auto">Expériences</h1>
+                <div class="container">
+                    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                        {{ range sort . "position"}}
+                        {{ partial "job-card" . }}
+                        {{ end }}
+                    </div>
+                </div>
         </div>
+    </scroll-show>
 </div>

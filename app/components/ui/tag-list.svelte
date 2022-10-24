@@ -6,7 +6,7 @@
   export let shuffle: boolean = false;
   $: tagList = tags
     .split(/[,|; ]+/gi)
-    .sort((a, b) => (shuffle ? Math.random() - 0.5 : a));
+    .sort((a, b) => (shuffle ? Math.random() - 0.5 : 1));
   $: visibles = tagList.slice(0, limit);
   $: hidden = tagList
     .slice(limit)
@@ -25,7 +25,7 @@
 
 <style>
   .list {
-    @apply grid grid-flow-col;
+    @apply grid grid-flow-col gap-1;
   }
   .tag {
     @apply inline-block mr-1 pt-1 pb-1.5 px-2 text-sm rounded-md border-none bg-black bg-opacity-30 text-gray3;
@@ -124,6 +124,30 @@
   .tag-github {
     color: #a2310b;
     background: #000;
+  }
+
+  .tag-c,
+  .tag-vb,
+  .tag-c,
+  .tag-access {
+    color: #497db7;
+    background: #fff;
+  }
+
+  .tag-html {
+    color: #000;
+    background: #497db7;
+  }
+
+  .tag-css {
+    color: #ffffff;
+    background: #d20909;
+  }
+
+  .tag-php,
+  .tag-symphony {
+    color: #ffffff;
+    background: #9d20db;
   }
 
   [data-tooltip] {

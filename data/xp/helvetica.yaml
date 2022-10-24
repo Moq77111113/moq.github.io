@@ -1,0 +1,8 @@
+position: 3
+job: "Software Developer"
+company: "Helvetica Partners"
+locality: "Genève, Suisse"
+start: "10/2017"
+end: "12/2018"
+description : > 
+tags:  delphi, oracle, node, typescript, postgres, docker
