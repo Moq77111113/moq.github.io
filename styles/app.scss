@@ -6,6 +6,7 @@
 @import './mixins.scss';
 @import './effects.scss';
 @import './tags.scss';
+@import './about.scss';
 
 html {
     display: block;
@@ -39,3 +40,4 @@ svg {
 .container {
     @apply max-w-screen-2xl mx-auto px-3 md:px-8;
 }
+

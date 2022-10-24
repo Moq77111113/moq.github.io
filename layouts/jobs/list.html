@@ -1,0 +1,32 @@
+{{ define "header" }}
+{{ partial "topnav" }}
+{{ end }}
+
+{{ define "main" }}
+<main class="prose dark:prose-invert container">
+
+    <ul class="grid-list pl-0">
+        {{ range sort .Pages ".Params.idx"}}
+        <a class="no-underline relative hover:scale-105 transition-transform" href="{{ .RelPermalink }}">
+            <li class="max-w-sm overflow-hidden shadow-3xl bg-gray6 p-6 rounded-xl ">
+                <span
+                    class="absolute -top-2 -left-5 font-display leading-6 text-center text-3xl w-10 h-10 rounded-full p-2">
+                    {{ .Params.emoji }}
+                </span>
+                <h5>{{ .Title }}</h5>
+                <p class="text-gray3">{{ .Description }}</p>
+            </li>
+        </a>
+        {{ end }}
+    </ul>
+
+    <article class="max-w-3xl mx-auto">
+        {{ .Content }}
+    </article>
+
+</main>
+{{ end }}
+
+{{ define "footer" }}
+{{ partial "footer" }}
+{{ end }}
