@@ -1,11 +1,11 @@
-<div class="min-w-90 md:h-screen">
-    <div class="container ">
+<div class="min-w-90 md:h-[80vh] z-0">
+    <div class="container">
         <div class="flex flex-col mt-20">
             <div class="flex flex-col justify-center items-center text-center p-6">
                 <ui-avatar src={{ .img}} name="{{ .name}}" email="{{ .email }}" />
             </div>
             <div class="flex flex-col justify-center items-center text-center p-6">
-                <h2 class="text-3xl text-gray3 font-display">{{ .title}}</h2>
+                <h2 class="text-3xl font-display">{{ .title}}</h2>
                 <p class="prose dark:prose-invert text-md mt-10">
                     {{.intro}}
                 </p>

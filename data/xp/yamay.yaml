@@ -5,5 +5,5 @@ locality: "Lyon, France"
 start: "01/2022"
 end: "Aujourd'hui"
 description : > 
-
+link: "/jobs/yamay"
 tags: node,typescript,react,nest,mongo,elastic,k8s,docker,gcp,gitlab

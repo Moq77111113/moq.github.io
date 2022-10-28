@@ -1,9 +1,9 @@
 .about {
   h2 {
-    @apply text-white inline-block my-6 border-b-2 border-dashed border-gray6 ;
+    @apply inline-block my-6 border-b-2 border-dashed border-gray6 ;
   }
   h3 {
-    @apply text-gray3 font-sans font-bold my-3;
+    @apply  font-sans font-bold my-3;
   }
 
   ol,
@@ -21,7 +21,7 @@
   }
 
   a, p a {
-    @apply text-gray1 no-underline font-medium duration-200;
+    @apply no-underline font-medium duration-200;
   }
 
   .svelte > a {

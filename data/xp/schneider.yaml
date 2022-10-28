@@ -5,4 +5,5 @@ locality: "Mâcon, France"
 start: "09/2014"
 end: "10/2015"
 description : > 
+link: "/job/schneider"
 tags:  vb, c#, .net, access, c, c++, html, css, php

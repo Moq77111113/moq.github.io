@@ -5,4 +5,5 @@ locality: "Genève, Suisse"
 start: "10/2017"
 end: "12/2018"
 description : > 
+link: "/jobs/helvetica"
 tags:  delphi, oracle, node, typescript, postgres, docker

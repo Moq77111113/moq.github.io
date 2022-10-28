@@ -19,7 +19,7 @@
     <span class="tag tag-{tag}">#{tag}</span>
   {/each}
   {#if hidden.length > 0}
-    <div class="tag more" data-tooltip={hidden}>✚</div>
+    <div class="tag more" data-tooltip={hidden}>+</div>
   {/if}
 </div>
 
@@ -28,7 +28,7 @@
     @apply grid grid-flow-col gap-1;
   }
   .tag {
-    @apply inline-block mr-1 pt-1 pb-1.5 px-2 text-sm rounded-md border-none bg-black bg-opacity-30 text-gray3;
+    @apply inline-block mr-1 pt-1 pb-1.5 px-2 text-sm rounded-md border-none bg-black bg-opacity-30 text-white dark:text-gray3;
   }
   .more {
     @apply rounded-full bg-pink-800 text-white cursor-pointer;
@@ -135,7 +135,7 @@
   }
 
   .tag-html {
-    color: #000;
+    color: #fff;
     background: #497db7;
   }
 

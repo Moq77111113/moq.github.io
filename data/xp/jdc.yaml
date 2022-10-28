@@ -5,4 +5,5 @@ locality: "Sausheim, France"
 start: "01/2016"
 end: "10/2017"
 description : > 
+lin: "/jobs/jdc"
 tags:  windev, pos
