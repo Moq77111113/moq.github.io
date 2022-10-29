@@ -2,12 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './buttons.scss';
 @import './mixins.scss';
 @import './effects.scss';
-@import './tags.scss';
 @import './about.scss';
-
 html {
     display: block;
     font-size: 13px;
@@ -17,8 +14,8 @@ html {
 }
 
 body {
-    @apply dark:bg-gray7 dark:text-gray1 bg-gray1;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    @apply dark:bg-gray7 dark:text-gray1 bg-neutral-200 text-gray7;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
     min-height: 100vh;
     background-attachment: fixed;
 }

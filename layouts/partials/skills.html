@@ -1,0 +1,14 @@
+<div id="skills" class="md:h-[80vh] m-0 items-start justify-center text-center relative">
+    <scroll-show>
+        <h2 class="font-700 text-3xl px-4 prose dark:prose-invert mx-auto my-6">Skills</h1>
+            <div class="container">
+                <div class="max-w-lg lg:max-w-xl m-auto flex flex-col">
+                    {{ range $index, $element := .skills }}
+                    <skill-bar skill={{ .lang }} percent={{ .skill }} delTime={{ mul $index 300 }} color={{ .color }}>
+                    </skill-bar>
+                    {{end}}
+                </div>
+            </div>
+
+    </scroll-show>
+</div>

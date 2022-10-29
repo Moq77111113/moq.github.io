@@ -41,6 +41,13 @@ module.exports = {
       orange: colors.orange,
       red: colors.red,
       yellow: colors.yellow,
+      navy: colors.navy,
+      amber: colors.amber,
+      slate: colors.slate,
+      zinc: colors.zinc,
+      stone: colors.stone,
+      neutral: colors.neutral,
+      teal: colors.teal
     },
     extend: {
       boxShadow: {

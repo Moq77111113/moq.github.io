@@ -26,7 +26,7 @@ J'apprécie découvrir de nouvelles technologies en permanence, que ce soit des 
 
 Ce site a été construit à l'aide de : 
 - <span class="hugo">[Hugo](https://gohugo.io)</span> framework pour la construction de site statique. 
-- <span class="svelte">[Svelte](https://svelte.dev)</span> framework javascript.
+- <span class="svelte">[Svelte](https://svelte.dev)</span> framework pour la création de composants javascript.
 - <span class="tailwindcss">[Tailwindcss](https://tailwindcss.com)</span> librairie de style.
 
 

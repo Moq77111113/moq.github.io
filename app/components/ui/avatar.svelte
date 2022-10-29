@@ -2,29 +2,23 @@
 
 <script lang="ts">
   export let src: string;
-  export let email: string;
   export let name: string;
 </script>
 
-<a class="wrap" href={`mailto:${email}`}>
+<div class="wrap">
   <img
     {src}
     alt={name}
     referrerpolicy="no-referrer"
-    style="max-width: 100%; border-radius: 9999px;"
     on:error={() => (src = "/img/ui/avatar.svg")}
   />
-</a>
+</div>
 
 <style lang="scss">
   img {
-    @apply w-40 h-40;
+    @apply h-64 pointer-events-none max-w-full rounded-full;
   }
   .wrap {
     @apply relative top-1 overflow-clip;
-  }
-
-  a {
-    @apply text-white no-underline;
   }
 </style>
