@@ -9,7 +9,7 @@ export default defineConfig({
     outDir: '../static/svelte',
     emptyOutDir: true,
     assetsDir: '',
-    // sourcemap: 'inline', // enable for debugging
+    sourcemap: 'inline', // enable for debugging
   },
   server: {
     port: 4200,
@@ -19,6 +19,12 @@ export default defineConfig({
       compilerOptions: {
         customElement: true,
       },
+      onwarn: (warn, handler) => {
+        const { code } = warn;
+        if (code === 'css-unused-selector') { return };
+
+        handler()
+      }
     }),
     syncToHugo()
   ]

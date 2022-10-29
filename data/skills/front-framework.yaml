@@ -1,0 +1,15 @@
+position: 2
+title: Langages, frameworks et librairies Frontend
+skills:
+  - lang: React
+    skill: 85
+    color: "#00d8ff66"
+  - lang: Svelte
+    skill: 92
+    color: "#ff3e00"
+  - lang: Angular
+    skill: 80
+    color: "#dc0530"
+  - lang: Dart, Flutter
+    skill: 80
+    color: "#54c5f8"

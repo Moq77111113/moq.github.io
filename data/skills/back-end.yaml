@@ -1,0 +1,9 @@
+position: 3
+title: Technologies Back-end
+skills: 
+  - lang: Express / NestJs 
+    skill: 94
+    color: "#e0234e"
+  - lang: GoLang
+    skill: 70
+    color: "#00add8"

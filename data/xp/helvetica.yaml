@@ -4,6 +4,9 @@ company: "Helvetica Partners"
 locality: "Genève, Suisse"
 start: "10/2017"
 end: "12/2018"
-description : > 
-link: "/jobs/helvetica"
+website: "https://www.helvetica-partners.com/fr/"
+description:
+  - "En mission à l'hôpital du Valais, Sion, Suisse"
+  - "Développement du dossier éléctronique du patient existant (Pascal / Delphi)"
+  - "Intégré par après à la team chargée de développer le nouveau Dossier Electronique du patient"
 tags:  delphi, oracle, node, typescript, postgres, docker
