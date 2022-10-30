@@ -1,6 +1,6 @@
 ---
-title: "A propos"
-date: 2022-10-24T16:15:31+02:00
+title: "A propos - Quentin Moessner"
+date: 2022-10-30T09:00:00+02:00
 draft: false
 github: https://github.com/Moq77111113/moq.github.io
 ---
@@ -11,7 +11,7 @@ Je m'appelle Quentin Moessner, j'ai 28 ans et je suis développeur web full-stac
 
 Dans la vie j'apprécie faire de la moto, du parapente ou du kitesurf. 
 
-{{<figure src="img/me.png">}} 
+{{<figure src="img/me.webp">}} 
 
 J'ai commencé le développement par des sites web statiques en `HTML5` et `CSS` vers mes 15 ans, puis me suis tourné vers une formation dédiée après mon Bac ou j'ai appris les bases de la programmation `C/ C++`
 Par la suite j'ai pu commencer le développement web avec `PHP`, `Symphony2` et `Javascript`
@@ -21,6 +21,15 @@ Mais c'est en 2016 que j'ai vraiment commencé à apprécier la programmation en
 J'apprécie découvrir de nouvelles technologies en permanence, que ce soit des languages de programmation, frameworks ou outils.
 
 <div class="separator"></div>
+
+### À venir
+
+- Ajout du multilingue 
+- Portfolio
+- Blog
+
+<div class="separator"></div>
+
 
 ### Crédits
 

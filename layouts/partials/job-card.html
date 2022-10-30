@@ -15,8 +15,8 @@
 
     <div class="p-4">
         {{ range .description }}
-        <p class="py-4 font-mono dark:text-left text-left" style="text-align: left;">{{ . | markdownify }}</p>
+        <p class="py-4 font-mono dark:text-left text-left">{{ . | markdownify }}</p>
         {{end}}
     </div>
-    <tag-list limit={4} tags={{ .tags }} shuffle={true} class="self-start absolute bottom-4 pt-4" />
+    <tag-list limit={4} tags={{ .tags }} shuffle={true} class="self-start absolute bottom-2" />
 </article>
