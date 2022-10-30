@@ -1,0 +1,12 @@
+position: 4
+job: "Technicien informatique"
+company: "JDC SA"
+locality: "Sausheim, France"
+start: "01/2016"
+end: "10/2017"
+website: "https://jdc.fr"
+description:
+  - "Installation et programmation (Windev) de systèmes d'encaissement. " 
+  - "Support & assistance des clients."
+lin: "/jobs/jdc"
+tags:  windev, pos

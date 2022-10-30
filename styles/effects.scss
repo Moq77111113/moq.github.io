@@ -1,0 +1,53 @@
+.gradient-text {
+  @apply bg-gradient-to-t from-gray2 to-gray6;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+}
+
+.gradient-text-green {
+  @apply bg-gradient-to-t from-green-700 to-green-400;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+}
+
+.gradient-text-pink {
+  @apply bg-gradient-to-r from-orange-500 to-pink-500;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+}
+
+.gradient-slide {
+  @apply bg-gradient-to-r from-orange-500 to-pink-500;
+  background-size: 200% 200%;
+  animation: gradiant-move 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: color 0.2s ease-in-out;
+}
+.gradient-slide:hover {
+  color: rgba(0, 0, 0, 0);
+}
+
+.animated-underline {
+  position: relative;
+}
+.animated-underline:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.animated-underline:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

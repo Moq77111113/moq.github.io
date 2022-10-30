@@ -1,0 +1,14 @@
+position: 1
+job: "Full Stack Developer"
+company: "Yamay"
+website: https://yamay.app
+locality: "Lyon, France"
+start: "01/2022"
+end: "Aujourd'hui"
+description:
+  - "Développement d'une marketplace mettant en relation un client et un établissement." 
+  -  "Le client accède au menu de l'établissement en scannant un QRCode, il peut même commander depuis son télépone."
+  -  "Le professionnel peut quant à lui accéder à un tableau de bord pour configurer sa carte, consulter des statistiques."
+
+link: "/jobs/yamay"
+tags: node,typescript,react,nest,mongo,elastic,k8s,docker,gcp,gitlab

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html class="dark">
+<html>
 
 <head>
     <meta charset="utf-8">
     <title>{{ .Page.Title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/svelte/{{ .Site.Data.svelte.css }}" />
     <script type="module" defer src="/svelte/{{ .Site.Data.svelte.js }}" />
@@ -15,14 +18,6 @@
     <meta name="theme-color" content="#454e56">
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <link rel="manifest" href="/manifest.json">
-    {{/*
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
-            });
-        }
-    </script> */}}
 
 </head>
 
@@ -36,7 +31,7 @@
     {{ block "footer" . }}
     <!-- footer -->
     {{ end }}
-
+    <scroll-up></scroll-up>
 </body>
 
 </html>

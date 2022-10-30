@@ -1,0 +1,40 @@
+skills: 
+  - lang: Nodejs
+    skill: 90
+    color: "#90c53f"
+  - lang: Typescript
+    skill: 92
+    color: "#2775c3"
+  - lang: React
+    skill: 85
+    color: "#00d8ff"
+  - lang: Svelte
+    skill: 92
+    color: "#ff3e00"
+  - lang: Angular
+    skill: 80
+    color: "#dc0530"
+  - lang: Dart, Flutter
+    skill: 80
+    color: "#54c5f8"
+  - lang: Express / NestJs 
+    skill: 94
+    color: "#e0234e"
+  - lang: GoLang
+    skill: 70
+    color: "#00add8"
+  - lang: MongoDb
+    skill: 87
+    color: "#6eb00c"
+  - lang: Postgres
+    skill: 84
+    color: "#4958e3"
+  - lang: "Elastic"
+    skill: 78
+    color: "#f0db4f"
+  - lang: "Docker"
+    skill: 88
+    color: "#2496ed"
+  - lang: "k8s"
+    skill: 83
+    color: "#4958e3"

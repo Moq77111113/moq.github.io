@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */ 
+/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
 
 module.exports = {
@@ -7,9 +7,19 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['sofia-pro', 'sans-serif'],
-      display: ['cubano', 'sans-serif'],
+      display: ['poppins', 'sans-serif'],
       body: ['sofia-pro', 'sans-serif'],
-      code: ['attribute-mono', 'sans-serif'],
+    },
+    minWidth: {
+      10: "10%",
+      20: "20%",
+      30: "30%",
+      40: "40%",
+      50: "50%",
+      60: "60%",
+      70: "70%",
+      80: "80%",
+      90: "90%"
     },
     colors: {
       transparent: 'transparent',
@@ -31,6 +41,13 @@ module.exports = {
       orange: colors.orange,
       red: colors.red,
       yellow: colors.yellow,
+      navy: colors.navy,
+      amber: colors.amber,
+      slate: colors.slate,
+      zinc: colors.zinc,
+      stone: colors.stone,
+      neutral: colors.neutral,
+      teal: colors.teal
     },
     extend: {
       boxShadow: {

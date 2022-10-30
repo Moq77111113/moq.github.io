@@ -1,0 +1,50 @@
+.about {
+  h2 {
+    @apply inline-block my-6 border-b-2 border-dashed border-gray6 ;
+  }
+  h3 {
+    @apply  font-sans font-bold my-3;
+  }
+
+  ol,
+  ul {
+    @apply font-light text-lg;
+  }
+
+  p, li {
+    @apply font-display;
+  }
+
+  em,
+  strong {
+    @apply font-bold text-lg;
+  }
+
+  a, p a {
+    @apply no-underline font-medium duration-200;
+  }
+
+  .svelte > a {
+      @apply hover:text-orange-400
+    }
+  .hugo > a {
+      @apply hover:text-purple-400
+    }
+  .tailwindcss > a {
+      @apply hover:text-blue-400
+    }
+
+  figure {
+    @apply flex items-center justify-center;
+    figcaption {
+      @apply text-center m-0 p-2;
+    }
+    img {
+      @apply rounded-full w-52 h-52;
+    }
+  }
+
+  .separator {
+    @apply mx-auto w-24 h-1 my-12 bg-gradient-to-r from-gray5 to-gray4 rounded-full;
+  }
+}

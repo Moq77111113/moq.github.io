@@ -1,0 +1,16 @@
+position: 2
+job: "Full Stack Developer"
+company: "Hôpital du Valais"
+locality: "Sion, Suisse"
+start: "01/2019"
+end: "12/2021"
+website: https://hopitalduvalais.ch
+description:
+  - "Développement de modules autour du dossier électronique des patients, en suivant la norme FHIR." 
+  - "Quelques exemples : <br />
+    - Module pour l'assistance et la surveillance des transfusions.<br />
+    - Module pour le suivi ambulatoire des patients. <br />
+    - Module de suivi des AVC en collaboration avec l'EPFL."
+
+link: "jobs/hvs"
+tags:  angular, postgres, docker, k8s, fhir, elastic, typescript, oracle, bamboo, node
