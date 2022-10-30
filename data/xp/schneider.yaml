@@ -7,6 +7,6 @@ end: "10/2015"
 website: "https://www.se.com/fr/fr/"
 description:
   - "Année d'alternance chez Schneider Electric France." 
-  - "Plusieurs développement m'ont été confiés, un système d'impression pour étiquettes indusctirelles, maintenance et évolution d'un système financer, développement d'un configurateur pour controlleur logique."
+  - "Plusieurs développements m'ont été confiés, un système d'impression pour étiquettes industirelles, maintenance et évolution d'un système financier, développement d'un configurateur pour controleur logique."
 link: "/job/schneider"
 tags:  vb, c#, .net, access, c, c++, html, css, php
