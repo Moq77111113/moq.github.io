@@ -1,9 +1,0 @@
-position: 1
-title: Bases
-skills: 
-  - lang: Nodejs
-    skill: 90
-    color: "#90c53f"
-  - lang: Typescript
-    skill: 92
-    color: "#2775c3"

@@ -1,5 +1,5 @@
-position: 2
-title: Langages, frameworks et librairies Frontend
+position: 1
+title: Frameworks et librairies Frontend
 skills:
   - lang: React
     skill: 85
@@ -8,7 +8,7 @@ skills:
     skill: 92
     color: "#ff3e00"
   - lang: Angular
-    skill: 80
+    skill: 82
     color: "#dc0530"
   - lang: Dart, Flutter
     skill: 80

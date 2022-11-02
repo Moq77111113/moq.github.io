@@ -13,6 +13,9 @@ skills:
   - lang: "Docker"
     skill: 88
     color: "#2496ed"
-  - lang: "k8s"
+  - lang: "Kubernetes"
     skill: 83
     color: "#4958e3"
+  - lang: "Gitlab CI"
+    skill: 87
+    color: "#f0b002"
