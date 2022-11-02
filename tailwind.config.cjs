@@ -32,7 +32,7 @@ module.exports = {
       gray4: '#6c7983',
       gray5: '#454e56',
       gray6: '#2a2e35',
-      gray7: '#12181b',
+      gray7: '#252525',
       link: '#0000ee',
       blue: colors.blue,
       green: colors.green,

@@ -1,0 +1,15 @@
+position: 3
+title: Compétences de base
+skills: 
+  - lang: Nodejs
+    skill: 90
+    color: "#90c53f"
+  - lang: Typescript
+    skill: 92
+    color: "#2775c3"
+  - lang: Jest
+    skill: 87
+    color: "#c95447"
+  - lang: Cypress
+    skill: 84
+    color: "#03ad39"
