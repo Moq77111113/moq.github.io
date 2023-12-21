@@ -1,36 +1,33 @@
 {
-  "name": "moq-webiste",
-  "version": "0.0.1",
-  "author": "Quentin Moessner",
-  "type": "module",
-  "main": "index.ts",
-  "license": "ISC",
-  "scripts": {
-    "dev": "vite",
-    "hugo": "hugo server --forceSyncStatic --port 6970",
-    "start": "concurrently \"vite build --watch\" \"yarn run hugo\"",
-    "vbuild": "vite build",
-    "build": "vite build && hugo",
-    "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
-  },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.1",
-    "@tailwindcss/typography": "^0.5.4",
-    "@tsconfig/svelte": "^2.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "@typescript-eslint/parser": "^5.36.2",
-    "autoprefixer": "^10.4.8",
-    "concurrently": "^7.3.0",
-    "eslint": "^8.23.0",
-    "postcss": "^8.4.16",
-    "sass": "^1.54.4",
-    "svelte": "^3.49.0",
-    "svelte-check": "^2.2.7",
-    "svelte-preprocess": "^4.10.7",
-    "tailwindcss": "^3.1.8",
-    "tslib": "^2.3.1",
-    "typescript": "^4.5.4",
-    "vite": "^3.0.5"
-  }
+	"name": "personal",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "eslint ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-netlify": "1.0.0-next.88",
+		"@sveltejs/enhanced-img": "^0.1.7",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@typescript-eslint/eslint-plugin": "^6.0.0",
+		"@typescript-eslint/parser": "^6.0.0",
+		"autoprefixer": "^10.4.16",
+		"eslint": "^8.28.0",
+		"eslint-plugin-svelte": "^2.30.0",
+		"postcss": "^8.4.32",
+		"svelte": "^5.0.0-next.1",
+		"svelte-check": "^3.6.0",
+		"tailwindcss": "^3.4.0",
+		"tslib": "^2.4.1",
+		"typescript": "^5.0.0",
+		"vite": "^5.0.3"
+	},
+	"type": "module"
 }
