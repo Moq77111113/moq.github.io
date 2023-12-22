@@ -25,7 +25,9 @@
 
 {#await preLoad()}
   <div class="relative h-screen w-screen">
-    <div class="absolute bottom-10 right-1/2"><Loading /></div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+      <Loading />
+    </div>
   </div>
 {:then}
   <main class="flex sm:flex-row flex-col h-screen w-screen" transition:fly>
