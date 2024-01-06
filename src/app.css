@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 body {
-  @apply bg-back;
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  @apply bg-back font-sans text-white;
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
   min-height: 100vh;
+  width: 100vw;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
