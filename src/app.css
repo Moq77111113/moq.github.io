@@ -2,13 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-back font-sans text-white;
-  transition:
-    background-color 0.4s ease-in-out,
-    color 0.4s ease-in-out;
-  min-height: 100vh;
-  width: 100vw;
-  background-attachment: fixed;
-  overflow-x: hidden;
+@layer base {
+  :root {
+    --background: 25 20 20;
+    --sidebar: 0 0 0;
+    --header: 0 0 0;
+    --text: 255 255 255;
+    --accent: 29 185 84;
+    --menu-bg: 46 46 46;
+    --menu-text: 255 255 255;
+    --light-gray: 167 167 167;
+    --medium-gray: 46 46 46;
+    --dark-gray: 24 24 24;
+    --error: 239 68 68;
+    --warning: 231 169 23;
+  }
+
+  ::-webkit-scrollbar {
+    @apply h-3 w-3;
+  }
+
+  body {
+    @apply bg-background text-text min-h-dvh w-dvw overflow-x-hidden bg-fixed;
+  }
+
+  ::selection {
+    @apply bg-accent text-text;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-[2rem];
+  }
+
+  h3 {
+    @apply text-[1.75rem];
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  p {
+    @apply my-[1em];
+  }
+
+  a {
+    @apply text-accent;
+  }
+
+  select,
+  input,
+  button,
+  a {
+    /* @apply focus-visible:outline-none focus-visible:outline-accent; */
+    @apply ring-offset-background focus-visible:ring-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  input {
+    @apply text-medium-gray h-10 rounded-3xl px-5 text-sm;
+  }
+
+  dialog {
+    @apply bg-dark-gray text-text rounded backdrop:bg-black/50 backdrop:backdrop-blur;
+  }
+}
+
+@layer components {
+  .grid-items {
+    @apply grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6;
+  }
 }

@@ -29,7 +29,7 @@
 </script>
 
 <header
-  class={`flex h-80  flex-col items-start justify-end p-5 sm:px-8
+  class={`flex h-80 flex-col items-start justify-end p-5 sm:px-8
   ${
     imagePath
       ? `bg-[url('$lib/assets/space.jpg')] bg-cover bg-center`
@@ -57,6 +57,6 @@
     </p>
   </div>
 </header>
-<main class="relative z-10 bg-gradient-to-b from-black/10 p-8">
+<main class="relative z-10 bg-gradient-to-b from-back/20 to-back p-8">
   <slot />
 </main>

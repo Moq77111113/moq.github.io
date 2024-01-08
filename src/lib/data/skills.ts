@@ -9,24 +9,16 @@ export const skills = [
     preferred: true,
   },
   {
-    name: 'React',
-    icon: Brands.React,
+    name: 'Next.js',
+    icon: Brands.Next,
     category: 'Front-End',
     preferred: false,
   },
-
   {
     name: 'TypeScript',
     icon: Brands.Typescript,
     category: 'Front-End',
     preferred: true,
-  },
-
-  {
-    name: 'Next.js',
-    icon: Brands.Next,
-    category: 'Front-End',
-    preferred: false,
   },
   {
     name: 'Tailwind CSS',
@@ -34,12 +26,11 @@ export const skills = [
     category: 'Front-End',
     preferred: false,
   },
-
   {
-    name: 'MongoDB',
-    icon: Brands.Mongo,
+    name: 'PostgreSQL',
+    icon: Brands.Postgres,
     category: 'Other',
-    preferred: false,
+    preferred: true,
   },
   {
     name: 'Docker',
@@ -60,6 +51,12 @@ export const skills = [
     preferred: false,
   },
   {
+    name: 'MongoDB',
+    icon: Brands.Mongo,
+    category: 'Other',
+    preferred: false,
+  },
+  {
     name: 'Kubernetes',
     icon: Brands.K8S,
     category: 'Other',
@@ -76,11 +73,5 @@ export const skills = [
     icon: Brands.Angular,
     category: 'Front-End',
     preferred: false,
-  },
-  {
-    name: 'PostgreSQL',
-    icon: Brands.Postgres,
-    category: 'Other',
-    preferred: true,
   },
 ] satisfies Skill[]
