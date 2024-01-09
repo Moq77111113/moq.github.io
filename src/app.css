@@ -1,33 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
   :root {
-    --background: 25 20 20;
-    --sidebar: 0 0 0;
-    --header: 0 0 0;
-    --text: 255 255 255;
-    --accent: 29 185 84;
-    --menu-bg: 46 46 46;
-    --menu-text: 255 255 255;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 72.22% 50.59%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.5rem;
     --light-gray: 167 167 167;
     --medium-gray: 46 46 46;
     --dark-gray: 24 24 24;
-    --error: 239 68 68;
-    --warning: 231 169 23;
+  }
+  .dark {
+    --background: 0 11% 9%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+    --light-gray: 167 167 167;
+    --medium-gray: 46 46 46;
+    --dark-gray: 24 24 24;
   }
 
   ::-webkit-scrollbar {
     @apply h-3 w-3;
   }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
 
   body {
-    @apply bg-background text-text min-h-dvh w-dvw overflow-x-hidden bg-fixed;
+    @apply min-h-dvh w-dvw overflow-x-hidden bg-background bg-fixed text-foreground;
   }
 
   ::selection {
-    @apply bg-accent text-text;
+    @apply bg-accent;
   }
 
   h1 {
@@ -63,7 +102,7 @@
   button,
   a {
     /* @apply focus-visible:outline-none focus-visible:outline-accent; */
-    @apply ring-offset-background focus-visible:ring-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    @apply ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2;
   }
 
   input {
@@ -71,7 +110,7 @@
   }
 
   dialog {
-    @apply bg-dark-gray text-text rounded backdrop:bg-black/50 backdrop:backdrop-blur;
+    @apply bg-dark-gray rounded backdrop:bg-black/50 backdrop:backdrop-blur;
   }
 }
 

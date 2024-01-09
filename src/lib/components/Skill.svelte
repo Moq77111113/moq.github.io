@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Skill } from '$lib/types/skill'
-  import { tw } from '$lib/utils/tailwind'
+  import { cn } from '$lib/utils'
 
   type Props = {
     skill: Skill
@@ -21,12 +21,12 @@
       <img
         src={skill.icon}
         alt={skill.name}
-        class={tw(
+        class={cn(
           'pointer-events-none mr-2 h-6 w-6 transition-all duration-200'
         )}
       />
       <h4
-        class={tw(
+        class={cn(
           'line-clamp-1 font-semibold',
           skill.preferred &&
             'bg-gradient-to-r from-blue-400 to-pink-600 bg-clip-text text-transparent'
