@@ -57,6 +57,9 @@
     </p>
   </div>
 </header>
-<main class="relative z-10 bg-gradient-to-b from-back/20 to-back p-8">
+
+<div
+  class="relative z-10 bg-gradient-to-b from-medium-gray via-dark-gray to-background"
+>
   <slot />
-</main>
+</div>

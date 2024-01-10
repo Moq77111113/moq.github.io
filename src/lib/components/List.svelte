@@ -1,5 +1,6 @@
 <script lang="ts">
   import { slide } from 'svelte/transition'
+  import Button from './ui/button/button.svelte'
   type T = $$Generic<Record<string, unknown>>
 
   type Props = {
@@ -28,9 +29,9 @@
   })
 </script>
 
-<article bind:this={articleRef}>
+<article bind:this={articleRef} class="flex flex-col items-start gap-2">
   <slot name="title">
-    <div class="mb-6 mt-2 flex items-center justify-between">
+    <div class=" mt-2 flex items-center justify-between">
       <h2 class="text-2xl font-semibold">{title}</h2>
     </div>
   </slot>
@@ -46,7 +47,7 @@
     {/each}
   </ul>
 
-  <button class="mt-6 text-sm text-gray-300" on:click={toggle}>
+  <Button variant="link" class="text-sm text-light-gray" on:click={toggle}>
     {showAll ? 'See less' : 'See more'}
-  </button>
+  </Button>
 </article>

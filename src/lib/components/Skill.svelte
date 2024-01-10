@@ -17,17 +17,18 @@
   {/if}
 
   <div class="flex-1 items-center pl-3">
-    <div class="group flex">
+    <div class="group flex items-center">
       <img
         src={skill.icon}
         alt={skill.name}
         class={cn(
-          'pointer-events-none mr-2 h-6 w-6 transition-all duration-200'
+          'pointer-events-none mr-2 h-6 w-6 transition-all duration-200',
+          skill.style
         )}
       />
       <h4
         class={cn(
-          'line-clamp-1 font-semibold',
+          'line-clamp-1 text-base font-semibold',
           skill.preferred &&
             'bg-gradient-to-r from-blue-400 to-pink-600 bg-clip-text text-transparent'
         )}

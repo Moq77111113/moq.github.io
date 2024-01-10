@@ -13,6 +13,7 @@ export const skills = [
     icon: Brands.Next,
     category: 'Front-End',
     preferred: false,
+    style: 'bg-white rounded-full',
   },
   {
     name: 'TypeScript',
@@ -49,6 +50,7 @@ export const skills = [
     icon: Brands.Github,
     category: 'Other',
     preferred: false,
+    style: 'bg-white rounded-full',
   },
   {
     name: 'MongoDB',
