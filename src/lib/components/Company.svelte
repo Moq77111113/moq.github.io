@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Skeleton from './Skeleton.svelte'
   import { cn } from '$lib/utils'
   import type { Company } from '$lib/types/company'
   import {
@@ -38,8 +37,6 @@
               'shrink-0 object-contain transition-transform duration-300 group-hover:scale-105'
             )}
           />
-
-          <Skeleton class="absolute inset-0 -z-10" />
         </div>
       {:else}
         <div

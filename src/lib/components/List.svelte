@@ -1,18 +1,22 @@
 <script lang="ts">
+  import type { ClassValue } from 'clsx'
+
   import { slide } from 'svelte/transition'
   import Button from './ui/button/button.svelte'
+  import { cn } from '$lib/utils'
   type T = $$Generic<Record<string, unknown>>
 
   type Props = {
     title?: string
     items: T[]
-    horizontal?: boolean
+    class?: ClassValue[]
+    showItems?: number
   }
-  let { items, title = '', horizontal = false } = $props<Props>()
+  let { items, title = '', showItems = 6 } = $props<Props>()
 
   let articleRef = $state<HTMLElement>()
   let showAll = $state(false)
-  let shownItems = $derived(showAll ? items : items.slice(0, 5))
+  let shownItems = $derived(showAll ? items : items.slice(0, showItems))
 
   const toggle = () => {
     showAll = !showAll
@@ -29,17 +33,13 @@
   })
 </script>
 
-<article bind:this={articleRef} class="flex flex-col items-start gap-2">
+<article bind:this={articleRef} class={cn('flex flex-col items-start gap-2')}>
   <slot name="title">
-    <div class=" mt-2 flex items-center justify-between">
+    <div class="mt-2 flex items-center justify-between">
       <h2 class="text-2xl font-semibold">{title}</h2>
     </div>
   </slot>
-  <ul
-    class="flex list-none"
-    class:flex-row={horizontal}
-    class:flex-col={!horizontal}
-  >
+  <ul class={`grid list-none gap-2`}>
     {#each shownItems as item, index}
       <li transition:slide={{ delay: index * 50 }}>
         <slot name="item" {item} {index} />
