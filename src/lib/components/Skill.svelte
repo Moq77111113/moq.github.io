@@ -30,7 +30,7 @@
         class={cn(
           'line-clamp-1 text-base font-semibold',
           skill.preferred &&
-            'bg-gradient-to-r from-blue-400 to-pink-600 bg-clip-text text-transparent'
+            'bg-gradient-to-r from-blue-400 to-red-600 bg-clip-text text-transparent'
         )}
       >
         {skill.name}
