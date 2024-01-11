@@ -59,7 +59,7 @@
 </header>
 
 <div
-  class="relative z-10 bg-gradient-to-b from-medium-gray via-dark-gray to-background"
+  class="relative z-10 mb-10 flex bg-gradient-to-b from-medium-gray via-dark-gray to-background"
 >
   <slot />
 </div>
