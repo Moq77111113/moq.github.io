@@ -3,18 +3,19 @@
   import List from '$lib/components/List.svelte'
   import Selection from '$lib/components/Selection.svelte'
   import Skill from '$lib/components/Skill.svelte'
-  import Button from '$lib/components/ui/button/button.svelte'
   import { companies } from '$lib/data/companies'
   import { skills } from '$lib/data/skills'
 </script>
 
 <main class="container">
   <!-- Skills -->
-  <section class="grid grid-cols-1 justify-around gap-6 md:grid-cols-2">
+  <section
+    class="flex flex-col justify-between gap-6 md:grid-cols-2 md:flex-row"
+  >
     <List
       title={'Skills'}
       items={skills}
-      class={['flex-shrink-1']}
+      class={['md:min-w-[400px]']}
       showItems={5}
     >
       <svelte:fragment slot="item" let:item let:index>
@@ -30,7 +31,7 @@
       </svelte:fragment>
     </List>
 
-    <div class="mb-3 flex flex-col items-start gap-2">
+    <div class="mb-3 flex flex-grow flex-col items-start gap-2">
       <div class="mt-2 flex items-start justify-between">
         <h2 class="text-2xl font-semibold">Actualité</h2>
       </div>
@@ -43,9 +44,6 @@
   <section class="mt-10">
     <div class="mb-3 flex items-center justify-between">
       <h2 class="text-2xl font-semibold">Companies</h2>
-      <Button variant="link" href="/companies">
-        View All <span class="sr-only">Companies</span>
-      </Button>
     </div>
 
     <div class="grid-items">

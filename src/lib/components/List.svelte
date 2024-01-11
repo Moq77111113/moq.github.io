@@ -12,7 +12,7 @@
     class?: ClassValue[]
     showItems?: number
   }
-  let { items, title = '', showItems = 6 } = $props<Props>()
+  let { items, title = '', class: clazz, showItems = 6 } = $props<Props>()
 
   let articleRef = $state<HTMLElement>()
   let showAll = $state(false)
@@ -33,7 +33,10 @@
   })
 </script>
 
-<article bind:this={articleRef} class={cn('flex flex-col items-start gap-2')}>
+<article
+  bind:this={articleRef}
+  class={cn('flex flex-col items-start gap-2', clazz)}
+>
   <slot name="title">
     <div class="mt-2 flex items-center justify-between">
       <h2 class="text-2xl font-semibold">{title}</h2>

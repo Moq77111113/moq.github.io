@@ -19,7 +19,7 @@
 <HoverCard>
   <HoverCardTrigger
     href={`/companies/${company.slug}`}
-    class={' group relative grid h-full w-full grid-cols-[auto,1fr] gap-x-4 rounded border-medium-gray p-2 transition-[background] duration-300 hover:bg-medium-gray md:flex md:flex-col md:border md:bg-dark-gray'}
+    class={'group relative grid h-full w-full grid-cols-[auto,1fr] gap-x-4 rounded border-medium-gray p-2 transition-[background] duration-300 hover:bg-medium-gray md:flex md:flex-col md:border md:bg-dark-gray'}
   >
     <div class="h-16 w-16 md:h-auto md:w-auto">
       {#if company.images.length > 0}

@@ -89,6 +89,6 @@
 @layer components {
   .grid-items {
     /* @apply flex flex-col overflow-x-hidden md:flex-row md:space-x-4; TODO : To implement with slider */
-    @apply grid grid-cols-1 overflow-x-hidden md:grid-cols-5 md:gap-5 lg:grid-cols-6 xl:grid-cols-8;
+    @apply grid grid-cols-1 overflow-x-hidden md:grid-cols-6 md:gap-5;
   }
 }
