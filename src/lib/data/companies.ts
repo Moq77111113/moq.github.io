@@ -61,7 +61,7 @@ export const companies = [
     name: 'Euromonetic',
     images: [{ url: Companies.Euromonetic }],
     bg: 'bg-white',
-    start: new Date('2013-09-01'),
+    start: new Date('2012-09-01'),
     end: new Date('2014-09-01'),
     description:
       'Euromonetic is a French company specializing in retail POS equipment solutions',

@@ -1,34 +1,36 @@
 <script lang="ts">
   import type { ClassValue } from 'clsx'
 
+  import { Button } from '$lib/components/ui/button'
+  import {
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+  } from '$lib/components/ui/collapsible'
   import { slide } from 'svelte/transition'
-  import Button from './ui/button/button.svelte'
-  import { cn } from '$lib/utils'
-  type T = $$Generic<Record<string, unknown>>
 
-  type Props = {
+  import { cn } from '$lib/utils'
+
+  type T = $$Generic<Record<string, unknown>>
+  type $$Props = {
     title?: string
     items: T[]
     class?: ClassValue[]
     showItems?: number
   }
-  let { items, title = '', class: clazz, showItems = 6 } = $props<Props>()
+  let { items, title, class: clazz, showItems = 5 } = $props<$$Props>()
 
   let articleRef = $state<HTMLElement>()
-  let showAll = $state(false)
-  let shownItems = $derived(showAll ? items : items.slice(0, showItems))
 
-  const toggle = () => {
-    showAll = !showAll
-  }
+  let shownItems = $derived(items.slice(0, showItems))
+  let hiddenItems = $derived(items.slice(showItems))
+
+  let open = $state(false)
 
   // FIXME: This is a hack to scroll to the bottom of the list when it's expanded
   $effect(() => {
-    if (showAll) {
-      setTimeout(
-        () => articleRef?.scrollIntoView({ behavior: 'smooth' }),
-        items.length * 50
-      )
+    if (open) {
+      articleRef?.scrollIntoView({ behavior: 'smooth' })
     }
   })
 </script>
@@ -50,7 +52,23 @@
     {/each}
   </ul>
 
-  <Button variant="link" class="text-sm text-light-gray" on:click={toggle}>
-    {showAll ? 'See less' : 'See more'}
-  </Button>
+  <Collapsible bind:open>
+    <CollapsibleContent>
+      <ul class={`grid list-none gap-2`}>
+        {#each hiddenItems as item, index}
+          <li>
+            <slot name="item" {item} index={index + shownItems.length} />
+          </li>
+        {/each}
+      </ul>
+    </CollapsibleContent>
+    <CollapsibleTrigger>
+      <slot name="trigger" {open}>
+         <!-- FIXME: Strange error in console with Svelte 5, checkout when stable -->
+        <Button variant="link" class="text-sm text-light-gray">
+          {open ? 'See less' : 'See more'}
+        </Button>
+      </slot>
+    </CollapsibleTrigger>
+  </Collapsible>
 </article>

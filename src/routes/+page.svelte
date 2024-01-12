@@ -3,6 +3,7 @@
   import List from '$lib/components/List.svelte'
   import Selection from '$lib/components/Selection.svelte'
   import Skill from '$lib/components/Skill.svelte'
+  import { Button } from '$lib/components/ui/button'
   import { companies } from '$lib/data/companies'
   import { skills } from '$lib/data/skills'
 </script>
@@ -44,10 +45,15 @@
   <section class="mt-10">
     <div class="mb-3 flex items-center justify-between">
       <h2 class="text-2xl font-semibold">Companies</h2>
+      <Button variant="link" href="/companies">
+        View All <span class="sr-only">Companies</span>
+      </Button>
     </div>
 
     <div class="grid-items">
-      {#each companies.sort((a, b) => b.start.valueOf() - a.start.valueOf()) as company}
+      {#each companies
+        .sort((a, b) => b.start.valueOf() - a.start.valueOf())
+        .slice(0, 5) as company}
         <Company {company} />
       {/each}
     </div>
