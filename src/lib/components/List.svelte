@@ -27,7 +27,6 @@
 
   let open = $state(false)
 
-  // FIXME: This is a hack to scroll to the bottom of the list when it's expanded
   $effect(() => {
     if (open) {
       articleRef?.scrollIntoView({ behavior: 'smooth' })
@@ -46,7 +45,7 @@
   </slot>
   <ul class={`grid list-none gap-2`}>
     {#each shownItems as item, index}
-      <li transition:slide={{ delay: index * 50 }}>
+      <li>
         <slot name="item" {item} {index} />
       </li>
     {/each}
@@ -64,8 +63,8 @@
     </CollapsibleContent>
     <CollapsibleTrigger>
       <slot name="trigger" {open}>
-         <!-- FIXME: Strange error in console with Svelte 5, checkout when stable -->
-        <Button variant="link" class="text-sm text-light-gray">
+        <!-- FIXME: Strange error in console with Svelte 5, checkout when stable -->
+        <Button variant="link" href="#" class="text-sm text-light-gray">
           {open ? 'See less' : 'See more'}
         </Button>
       </slot>

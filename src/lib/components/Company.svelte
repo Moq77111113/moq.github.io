@@ -63,8 +63,8 @@
       <p class="hidden text-sm text-light-gray md:line-clamp-2">
         {company.description}
       </p>
-    </div></HoverCardTrigger
-  >
+    </div>
+  </HoverCardTrigger>
   <HoverCardContent class="flex flex-col rounded-md">
     <h5>{company.name}</h5>
     <p class="relative line-clamp-1 text-xs text-light-gray">{company.job}</p>

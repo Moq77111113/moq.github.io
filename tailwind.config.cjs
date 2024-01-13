@@ -50,6 +50,7 @@ const config = {
         'light-gray': 'rgb(var(--light-gray) / <alpha-value>)',
         'medium-gray': 'rgb(var(--medium-gray) / <alpha-value>)',
         'dark-gray': 'rgb(var(--dark-gray) / <alpha-value>)',
+        'green-spotify': 'hsl(var(--green-spotify) / <alpha-value>)',
       },
 
       borderRadius: {

@@ -5,6 +5,7 @@
   :root {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
+    --green-spotify: 142 73% 48%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
@@ -36,10 +37,6 @@
 
   body {
     @apply min-h-dvh w-dvw overflow-x-hidden bg-background bg-fixed text-foreground;
-  }
-
-  ::selection {
-    @apply bg-accent;
   }
 
   h1 {
