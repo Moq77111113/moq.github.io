@@ -81,6 +81,10 @@
   dialog {
     @apply rounded bg-dark-gray backdrop:bg-black/50 backdrop:backdrop-blur;
   }
+
+  img {
+    @apply pointer-events-none;
+  }
 }
 
 @layer components {

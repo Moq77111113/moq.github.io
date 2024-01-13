@@ -11,7 +11,6 @@ import Postgres from './pg.svg'
 import Typescript from './typescript.svg'
 import Tailwind from './tailwind.svg'
 import Svelte from './svelte.svg'
-
 export {
   Adonis,
   Angular,
