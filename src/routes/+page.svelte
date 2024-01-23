@@ -1,85 +1,79 @@
 <script lang="ts">
-  import me from "$lib/assets/me.jpg";
-  import hero from "$lib/assets/hero.jpg";
-  import { fly } from "svelte/transition";
-  import Loading from "$lib/components/Loading.svelte";
-
-  const name = "Quentin Moessner";
-  const linkedin = "https://www.linkedin.com/in/quentin-moessner-8a3a5b212/";
-  const github = "https://github.com/Moq77111113";
-
-  let preLoad = async () =>
-    await Promise.all([
-      new Promise((res) => {
-        let pictureOfMe = new Image();
-        pictureOfMe.onload = () => setTimeout(res, 500);
-        pictureOfMe.src = me;
-      }),
-      new Promise((res) => {
-        let pictureOfHero = new Image();
-        pictureOfHero.onload = () => setTimeout(res, 500);
-        pictureOfHero.src = hero;
-      }),
-    ]);
+  import Company from '$lib/components/Company.svelte'
+  import List from '$lib/components/List.svelte'
+  import About from '$lib/components/About.svelte'
+  import { Play } from 'lucide-svelte'
+  import Skill from '$lib/components/Skill.svelte'
+  import { Button } from '$lib/components/ui/button'
+  import { companies } from '$lib/data/companies'
+  import { skills } from '$lib/data/skills'
 </script>
 
-{#await preLoad()}
-  <div class="relative h-screen w-screen">
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
-      <Loading />
-    </div>
-  </div>
-{:then}
-  <main class="flex sm:flex-row flex-col h-screen w-screen" transition:fly>
-    <section
-      class="sm:w-1/3 h-full w-full p-8 flex flex-col items-center justify-center bg-off text-back border-r-2 border-back shadow-lg"
+<main class="container max-w-screen-lg">
+  <!-- Nav -->
+  <nav class="my-6 flex w-full flex-row">
+    <Button
+      size="icon"
+      class="flex h-12 w-12 rounded-full bg-green-spotify hover:scale-110 hover:bg-green-spotify/90"
+      ><Play color="#000" fill="#000" size={20} /></Button
     >
-      <header class="py-12">
-        <h1 class="text-4xl text-center font-bold mb-4">{name}</h1>
-      </header>
-      <article class="flex flex-col justify-center items-center gap-4">
-        <img
-          src={me}
-          alt="Moi :)"
-          sizes="min(1280px, 100vw)"
-          class="rounded-full w-32 h-32 object-cover pointer-events-none"
-        />
-        <div class="mt-12 flex flex-row">
-          <a
-            aria-label="Lien vers mon profil LinkedIn"
-            href={linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mr-4"><i class="fa-brands fa-2xl fa-linkedin"></i></a
-          >
+  </nav>
 
-          <a
-            aria-label="Lien vers mon profil GitHub"
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mr-2"
-          >
-            <i class="fa-brands fa-2xl fa-github"></i></a
-          >
+  <!-- Skills -->
+  <section
+    class="mt-2 flex flex-col justify-between gap-6 md:mt-0 md:grid-cols-2 md:flex-row"
+  >
+    <List
+      title={'Skills'}
+      items={skills}
+      class={['order-2 md:order-1 md:min-w-[400px]']}
+      showItems={5}
+    >
+      <div slot="title" class="mt-2 flex flex-col items-start">
+        <h2 class="text-2xl font-semibold">Skills</h2>
+        <span
+          class=" bg-gradient-to-r from-blue-400 to-red-600 bg-clip-text text-xs lowercase text-transparent"
+          ><small class="align-middle">❤</small> stack</span
+        >
+      </div>
+      <svelte:fragment slot="item" let:item let:index>
+        <div
+          class="flex grow-0 items-center rounded px-1 py-2 hover:bg-white/5"
+        >
+          <div class="flex w-8 items-center justify-center">
+            <span class="text-gray-300">{index + 1}</span>
+          </div>
+
+          <Skill skill={item} />
         </div>
+      </svelte:fragment>
+    </List>
 
-        <div class="mt-12">
-          <h2 class="text-xl">Portfolio en reconstruction !</h2>
-        </div>
-      </article>
-    </section>
+    <!-- About -->
+    <div class="order-1 flex flex-grow flex-col items-start gap-2 md:order-2">
+      <div class="mb-3 mt-2 flex items-start justify-between">
+        <h2 class="text-2xl font-semibold">About</h2>
+      </div>
 
-    <div class="sm:w-2/3 hidden sm:block">
-      <figure class="w-full h-full">
-        <img src={hero} alt="joli non ?" class="w-full h-full" />
-      </figure>
+      <About />
     </div>
-  </main>
-{/await}
+  </section>
 
-<style>
-  img {
-    @apply pointer-events-none;
-  }
-</style>
+  <!-- Companies -->
+  <section class="mt-10">
+    <div class="mb-3 flex items-center justify-between">
+      <h2 class="text-2xl font-semibold">Companies</h2>
+      <Button variant="link" href="/companies">
+        View All <span class="sr-only">Companies</span>
+      </Button>
+    </div>
+
+    <div class="grid-items">
+      {#each companies
+        .sort((a, b) => b.start.valueOf() - a.start.valueOf())
+        .slice(0, 5) as company}
+        <Company {company} />
+      {/each}
+    </div>
+  </section>
+</main>
